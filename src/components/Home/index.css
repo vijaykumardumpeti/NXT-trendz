@@ -1,0 +1,41 @@
+.primium-container {
+  height: 360px;
+}
+.search-icon {
+  font-size: 22px;
+}
+.no-videos-image {
+  height: 300px;
+  width: 400px;
+}
+.retry-button {
+  color: white;
+  background-color: #4f46e5;
+  border: 0px none transparent;
+  border-radius: 4px;
+  padding: 5px;
+  width: 60px;
+}
+.premium-wrong-button {
+  border: 0px none transparent;
+  background-color: transparent;
+  font-size: 33px;
+}
+
+@media all and (max-width: 767px) {
+  .premium-wrong-button {
+    font-size: 22px;
+  }
+  .no-videos-image {
+    height: 150px;
+    width: 160px;
+  }
+  .heading {
+    font-size: 17px;
+    text-align: center;
+  }
+  .para {
+    font-size: 12px;
+    text-align: center;
+  }
+}
