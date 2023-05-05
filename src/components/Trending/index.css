@@ -1,0 +1,51 @@
+.react-player {
+  max-height: 250px;
+  max-width: 460px;
+
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+.video-profile {
+  display: none;
+}
+.view {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  width: 230px;
+}
+.views-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 180px;
+  line-height: 1px;
+}
+@media all and (max-width: 767px) {
+  .view {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 210px;
+  }
+  .views-container {
+    width: 150px;
+  }
+  .react-player {
+    max-height: 200px;
+    max-width: 345px;
+
+    margin-right: 0px;
+  }
+  .video-profile {
+    height: 50px;
+    margin-right: 20px;
+    display: block;
+  }
+}

@@ -8,8 +8,9 @@ export const HeaderContainer = Styled.div`
     height: 95vh;
 
     width: 20vw;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-    background-color: ${props => (props.isDark ? '#212121' : '#f1f1f1')};
+    background-color: ${props => (props.isDark ? '#212121' : '#ffffff')};
     color: ${props => (props.isDark ? '#f1f1f1' : '#212121')};
 
 
@@ -29,7 +30,8 @@ export const ListItem = Styled.li`
     justify-content: flex-start;
     align-items: center;
 
-    max-width: 300px;
+    min-width: 320px;
+    max-width: 320px;
 
     margin-left: -40px;
     padding: 10px;

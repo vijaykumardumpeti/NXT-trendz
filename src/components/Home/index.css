@@ -21,7 +21,25 @@
   background-color: transparent;
   font-size: 33px;
 }
+.video-profiles {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+  margin-bottom: 30px;
+}
 
+.loader-container {
+  color: red;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  height: 600px;
+
+  width: 1200px;
+}
 @media all and (max-width: 767px) {
   .premium-wrong-button {
     font-size: 22px;
@@ -38,4 +56,25 @@
     font-size: 12px;
     text-align: center;
   }
+  .loader-container {
+    height: 350px;
+    width: 350px;
+  }
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+.link-element-style-1 {
+  text-decoration: none;
+
+  color: white;
+
+  background-color: black;
+}
+.link-element-style-2 {
+  text-decoration: none;
+  color: black;
+
+  background-color: white;
 }

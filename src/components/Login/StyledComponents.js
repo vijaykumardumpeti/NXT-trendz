@@ -13,7 +13,7 @@ export const Container = Styled.div`
     
 `
 
-export const FormContainer = Styled.div`
+export const FormContainer = Styled.form`
     display:flex;
     flex-direction:column;
     justify-content: space-between;
@@ -22,7 +22,7 @@ export const FormContainer = Styled.div`
 
 
 
-    box-shadow: 0px 10px 40px 0px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 20px;
     border-radius: 10px;
     background-color: ${props => (props.isDark ? '#1e293b' : '#f1f1f1')};

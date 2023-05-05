@@ -1,0 +1,109 @@
+.react-player {
+  top: 0;
+  left: 0;
+
+  max-height: 520px;
+  max-width: 1250px;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.bg-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  background-size: cover;
+
+  height: 100vh;
+}
+.hr {
+  color: #7e858e;
+}
+.video-item-container {
+  height: 100vh;
+  width: 100vw;
+
+  padding: 20px;
+}
+.first-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 170px;
+}
+.second-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 200px;
+
+  font-family: 'roboto';
+}
+.text-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 1250px;
+}
+.profile-container {
+  height: 100px;
+  width: 40px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  margin-right: 40px;
+  margin-top: 15px;
+}
+.image {
+  height: 60px;
+  width: 60px;
+}
+.last-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.profile-description-container {
+}
+.description {
+}
+@media all and (max-width: 767px) {
+  .react-player {
+    max-height: 220px;
+    max-width: 920px;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+.video-button {
+  border: 0px none transparent;
+  background-color: transparent;
+}
+.like-style {
+  color: blue;
+}
+.disLike-style {
+  color: blue;
+}
+.save-style {
+  color: blue;
+}
