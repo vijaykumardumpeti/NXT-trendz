@@ -7,6 +7,8 @@ export const Container = Styled.div`
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start; 
+
+       background-color: ${props => (props.isDark ? '#181818' : '#f9f9f9')};
   
 
 

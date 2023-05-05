@@ -40,7 +40,23 @@
 
   width: 1200px;
 }
+.views-container {
+  width: 600px;
+  line-height: 2px;
+}
+.view {
+  max-width: 100px;
+}
+
 @media all and (max-width: 767px) {
+  .views-container {
+    min-width: 160px;
+    max-width: 160px;
+    line-height: 2px;
+  }
+  .view {
+    min-width: 240px;
+  }
   .premium-wrong-button {
     font-size: 22px;
   }

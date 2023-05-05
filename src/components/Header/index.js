@@ -83,19 +83,33 @@ class Header extends Component {
           const linkStyle = isDark ? 'link-white' : 'link-dark'
 
           return (
-            <div className={`nav-container ${bgColor}`}>
+            <div data-testid="banner" className={`nav-container ${bgColor}`}>
               <Link to="/">
-                <img className="logo-image" alt="logo" src={imagUrl} />
+                <img className="logo-image" alt="website logo" src={imagUrl} />
               </Link>
               <ul className="desktop-list">
                 {isDark ? (
-                  <li onClick={this.onChangeDark}>
-                    <FiSun className={`dark-mode-icon ${color}`} />
-                  </li>
+                  <button
+                    data-testid="theme"
+                    onClick={this.onChangeDark}
+                    className="dark-mode-button"
+                    type="button"
+                  >
+                    <li data-testid="theme">
+                      <FiSun className={`dark-mode-icon ${color}`} />
+                    </li>
+                  </button>
                 ) : (
-                  <li onClick={this.onChangeDark}>
-                    <MdDarkMode className={`dark-mode-icon ${color}`} />
-                  </li>
+                  <button
+                    data-testid="theme"
+                    onClick={this.onChangeDark}
+                    className="dark-mode-button"
+                    type="button"
+                  >
+                    <li data-testid="theme">
+                      <MdDarkMode className={`dark-mode-icon ${color}`} />
+                    </li>
+                  </button>
                 )}
                 <li>
                   <img
@@ -147,6 +161,7 @@ class Header extends Component {
               <ul className="mobile-list">
                 {isDark ? (
                   <button
+                    data-testid="theme"
                     onClick={this.onChangeDark}
                     className="dark-mode-button"
                     type="button"
@@ -157,6 +172,7 @@ class Header extends Component {
                   </button>
                 ) : (
                   <button
+                    data-testid="theme"
                     onClick={this.onChangeDark}
                     className="dark-mode-button"
                     type="button"

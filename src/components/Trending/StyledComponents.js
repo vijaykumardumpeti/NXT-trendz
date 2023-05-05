@@ -10,6 +10,8 @@ export const Container = Styled.div`
     height: 100vh;
     overflow-y: auto;
 
+    background-color: ${props => (props.isDark ? '#181818' : '#f9f9f9')};
+
     @media all and (max-width: 767px){
         height: 100vh;
         overflow-y: auto;  

@@ -5,10 +5,9 @@ export const HomeContainer = Styled.div`
     justify-content: flex-start;
     align-items: flex-start;
 
-   
-     
-`
 
+    background-color: ${props => (props.isDark ? '#181818' : '#f9f9f9')};    
+`
 export const DisplayContainer = Styled.div`
   
      width: 80vw;
@@ -275,17 +274,6 @@ export const VideoItemContainer = Styled.div`
     
 `
 
-export const ReactPlayerContainer = Styled.div`
-
-        background-image: url(${props => props.thumbnailUrl});
-
-        background-size: cover;
-        height: 200px;
-        width: 325px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-`
-
 export const VideoDescriptionContainer = Styled.div`
         display: flex;
         flex-direction: row;
@@ -321,4 +309,20 @@ export const VideoPara = Styled.p`
            font-size: 14px;
         }
 
+`
+
+export const ReactPlayerContainer = Styled.div`
+
+        
+
+        background-size: cover;
+        height: 200px;
+        width: 325px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+`
+
+export const Img = Styled.img`
+        height: 200px;
+        width: 325px;
 `

@@ -213,7 +213,7 @@ export default class VideoItemDetails extends Component {
 
     return (
       <NormalContainer>
-        <img className="no-videos-image" alt="no videos" src={imgUrl} />
+        <img className="no-videos-image" alt="failure view" src={imgUrl} />
         <h1 className="heading">Oops! Something Went Wrong</h1>
         <p className="para">
           We are having some trouble to complete your request. Please try agin.
@@ -287,7 +287,7 @@ export default class VideoItemDetails extends Component {
           return (
             <>
               <Header />
-              <BgContainer isDark={isDark}>
+              <BgContainer isDark={isDark} data-testid="videoItemDetails">
                 <HeaderLeft />
                 {this.switchMethod(
                   isDark,

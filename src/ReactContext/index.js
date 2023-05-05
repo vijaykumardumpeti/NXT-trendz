@@ -7,6 +7,7 @@ const ReactContextObj = React.createContext({
   isLiked: false,
   isDisLiked: false,
   isSaved: false,
+  SavedVideosList: [],
   changeDark: () => {},
 
   changeToTrending: () => {},

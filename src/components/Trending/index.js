@@ -158,7 +158,7 @@ export default class Trending extends Component {
 
     return (
       <NormalContainer isDark={isDark}>
-        <img className="no-videos-image" alt="no videos" src={imgUrl} />
+        <img className="no-videos-image" alt="failure view" src={imgUrl} />
         <h1 className="heading">Oops! Something Went Wrong</h1>
         <p className="para">
           We are having some trouble to complete your request. Please try agin.
@@ -263,7 +263,7 @@ export default class Trending extends Component {
           return (
             <>
               <Header />
-              <Container>
+              <Container data-testid="trending">
                 <HeaderLeft />
                 <TrendingContainer>
                   <TrendingNav isDark={isDark}>

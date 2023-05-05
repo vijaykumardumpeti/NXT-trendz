@@ -1,5 +1,7 @@
 import {Component} from 'react'
 
+import {formatDistanceToNow} from 'date-fns'
+
 import Cookies from 'js-cookie'
 
 import {Link} from 'react-router-dom'
@@ -32,6 +34,7 @@ import {
   VideoHeading,
   VideoPara,
   ReactPlayerContainer,
+  Img,
 } from './StyledComponents'
 
 import './index.css'
@@ -122,7 +125,7 @@ export default class Home extends Component {
 
     return (
       <NormalContainer>
-        <img className="no-videos-image" alt="no videos" src={imgUrl} />
+        <img className="no-videos-image" alt="failure view" src={imgUrl} />
         <h1 className="heading">Oops! Something Went Wrong</h1>
         <p className="para">
           We are having some trouble to complete your request. Please try agin.
@@ -178,6 +181,10 @@ export default class Home extends Component {
           } = videoObj
           const {name, profileImageUrl} = channel
 
+          const dateString = formatDistanceToNow(new Date(publishedAt))
+
+          console.log(dateString)
+
           const linkStyle = isDark
             ? 'link-element-style-1'
             : 'link-element-style-2'
@@ -185,17 +192,14 @@ export default class Home extends Component {
           return (
             <Link className={linkStyle} to={`/videos/${id}`}>
               <VideoItemContainer key={id}>
-                <ReactPlayerContainer
-                  thumbnailUrl={thumbnailUrl}
-                  className="react-player"
-                >
-                  .
+                <ReactPlayerContainer>
+                  <Img alt="channel logo" src={thumbnailUrl} />
                 </ReactPlayerContainer>
                 <VideoDescriptionContainer>
                   <div>
                     <img
                       className="video-profiles"
-                      alt={name}
+                      alt="channel logo"
                       src={profileImageUrl}
                     />
                   </div>
@@ -205,7 +209,7 @@ export default class Home extends Component {
                       <VideoPara>{name}</VideoPara>
                       <div className="views-container">
                         <VideoPara>{viewCount} views</VideoPara>
-                        <VideoPara>{publishedAt}</VideoPara>
+                        <VideoPara>{dateString}</VideoPara>
                       </div>
                     </div>
                   </div>
@@ -246,21 +250,25 @@ export default class Home extends Component {
         {value => {
           const {isDark} = value
           return (
-            <>
+            <div>
               <Header />
-              <HomeContainer>
+              <HomeContainer data-testid="home">
                 <HeaderLeft />
                 <DisplayContainer>
                   <PremiumContainer>
                     <div className="primium-container">
                       <ImagePremium
-                        alt="hh"
+                        alt="nxt watch logo"
                         src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"
                       />
                       <Para>Buy Nxt Watch Premium prepaid plans with UPI</Para>
                       <ButtonGetIt type="button">GET IT NOW</ButtonGetIt>
                     </div>
-                    <button className="premium-wrong-button" type="button">
+                    <button
+                      data-testid="close"
+                      className="premium-wrong-button"
+                      type="button"
+                    >
                       <MdOutlineClear />
                     </button>
                   </PremiumContainer>
@@ -275,6 +283,7 @@ export default class Home extends Component {
                       />
                       <IconContainer isDark={isDark}>
                         <BiSearchAlt
+                          data-testid="searchButton"
                           className="search-icon"
                           onClick={this.reloadApiCall}
                         />
@@ -284,7 +293,7 @@ export default class Home extends Component {
                   </ResultContainer>
                 </DisplayContainer>
               </HomeContainer>
-            </>
+            </div>
           )
         }}
       </ReactContextObj.Consumer>

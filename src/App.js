@@ -1,4 +1,4 @@
-import {Switch, Route} from 'react-router-dom'
+import {Switch, Route, Redirect} from 'react-router-dom'
 import {Component} from 'react'
 
 import Login from './components/Login'
@@ -7,6 +7,7 @@ import Trending from './components/Trending'
 import Gaming from './components/Gaming'
 import SavedVideos from './components/SavedVideos'
 import VideoItemDetails from './components/VideoItemDetails'
+import NotFound from './components/NotFound'
 
 import ProtectedRoute from './components/ProtectedRoute'
 
@@ -21,6 +22,7 @@ export default class App extends Component {
     isLiked: false,
     isDisLiked: false,
     isSaved: false,
+    SavedVideosList: [],
   }
 
   changeToTrending = () => {
@@ -72,7 +74,14 @@ export default class App extends Component {
   }
 
   render() {
-    const {isDark, routePath, isLiked, isDisLiked, isSaved} = this.state
+    const {
+      isDark,
+      routePath,
+      isLiked,
+      isDisLiked,
+      isSaved,
+      SavedVideosList,
+    } = this.state
     return (
       <ReactContextObj.Provider
         value={{
@@ -90,6 +99,8 @@ export default class App extends Component {
           likeButton: this.likeButton,
           disLikeButton: this.disLikeButton,
           saveButton: this.saveButton,
+
+          SavedVideosList,
         }}
       >
         <Switch>
@@ -103,6 +114,8 @@ export default class App extends Component {
             path="/videos/:id"
             component={VideoItemDetails}
           />
+          <Route exact path="/bad-path" component={NotFound} />
+          <Redirect component={NotFound} />
         </Switch>
       </ReactContextObj.Provider>
     )

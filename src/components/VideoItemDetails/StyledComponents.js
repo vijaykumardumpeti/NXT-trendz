@@ -16,7 +16,7 @@ export const BgContainer = Styled.div`
 
 
 
-background-color: ${props => (props.isDark ? '#181818' : '#ffffff')};
+background-color: ${props => (props.isDark ? '#181818' : '#f9f9f9')};
 color: ${props => (props.isDark ? '#ffffff' : '#181818')};
 
 

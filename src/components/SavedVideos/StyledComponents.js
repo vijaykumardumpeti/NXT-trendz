@@ -9,6 +9,8 @@ export const Container = Styled.div`
     align-items: flex-start; 
   
 
+    background-color: ${props => (props.isDark ? '#181818' : '#f9f9f9')};
+
 
 
 `
@@ -167,4 +169,25 @@ export const ReactPlayerContainer = Styled.div`
             height: 100vh;
             width: 90vw;
         }
+`
+
+export const NormalContainer = Styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  
+  height: 80vh;
+  width: 80vw;
+
+  color: ${props => (props.isDark ? '#ffffff' : '#181818')};
+  background-color: ${props => (props.isDark ? '#181818' : '#ffffff')};
+
+  padding: 30px;
+
+
+@media all and (max-width: 767px){
+    width: 100vw;
+}
+
 `

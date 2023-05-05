@@ -62,6 +62,7 @@ export default class HeaderLeft extends Component {
             <HeaderContainer isDark={isDark}>
               <UnorderedListContainer isDark={isDark}>
                 <Link
+                  data-testid="home"
                   isDark={isDark}
                   onClick={this.onChangeToHome}
                   className={linkStyle}
